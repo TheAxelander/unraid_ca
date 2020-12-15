@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>OpenBudgeteer</Name>
+  <Repository>axelander/openbudgeteer</Repository>
+  <Registry>https://hub.docker.com/r/axelander/openbudgeteer</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://gitlab.com/Axelander/openbudgeteer</Project>
+  <Overview>OpenBudgeteer is a budgeting app based on the Bucket Budgeting Principle</Overview>
+  <Category>Productivity: Tools: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL/>
+  <Icon>https://gitlab.com/Axelander/openbudgeteer/-/raw/master/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1607942823</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>OpenBudgeteer is a budgeting app based on the Bucket Budgeting Principle</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6000</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/app/database</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>Connection:Provider</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>Connection:Server</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>Connection:Port</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>Connection:Database</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>Connection:User</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>Connection:Password</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">6000</Config>
+  <Config Name="Database Provider" Target="Connection:Provider" Default="mysql" Mode="" Description="mysql or sqlite" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Database Server" Target="Connection:Server" Default="" Mode="" Description="IP address of database server (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Port" Target="Connection:Port" Default="" Mode="" Description="Port of database server (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Name" Target="Connection:Database" Default="" Mode="" Description="Name of the database (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database User" Target="Connection:User" Default="" Mode="" Description="Database user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Password" Target="Connection:Password" Default="" Mode="" Description="Password of database user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Sqlite Databse Path" Target="/app/database" Default="" Mode="rw" Description="Path of local sqlite database (sqlite only)" Type="Path" Display="always" Required="false" Mask="false"/>
+</Container>
