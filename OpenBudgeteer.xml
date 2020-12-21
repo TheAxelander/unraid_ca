@@ -13,7 +13,7 @@
   <Category>Productivity: Tools: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL/>
-  <Icon>https://gitlab.com/Axelander/openbudgeteer/-/raw/master/icon.png</Icon>
+  <Icon>https://gitlab.com/Axelander/openbudgeteer/-/raw/master/assets/icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
