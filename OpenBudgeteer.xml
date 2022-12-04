@@ -41,42 +41,55 @@
   <Environment>
     <Variable>
       <Value/>
-      <Name>Connection:Provider</Name>
+      <Name>CONNECTION_PROVIDER</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>Connection:Server</Name>
+      <Name>CONNECTION_SERVER</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>Connection:Port</Name>
+      <Name>CONNECTION_PORT</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>Connection:Database</Name>
+      <Name>CONNECTION_DATABASE</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>Connection:User</Name>
+      <Name>CONNECTION_USER</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>Connection:Password</Name>
+      <Name>CONNECTION_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>APPSETTINGS_CULTURE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>APPSETTINGS_THEME</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
   <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">6100</Config>
-  <Config Name="Database Provider" Target="Connection:Provider" Default="mysql" Mode="" Description="mysql or sqlite" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Database Server" Target="Connection:Server" Default="" Mode="" Description="IP address of database server (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Database Port" Target="Connection:Port" Default="" Mode="" Description="Port of database server (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Database Name" Target="Connection:Database" Default="" Mode="" Description="Name of the database (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Database User" Target="Connection:User" Default="" Mode="" Description="Database user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Database Password" Target="Connection:Password" Default="" Mode="" Description="Password of database user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Provider" Target="CONNECTION_PROVIDER" Default="mysql" Mode="" Description="mysql or sqlite" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Database Server" Target="CONNECTION_SERVER" Default="" Mode="" Description="IP address of database server (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Port" Target="CONNECTION_PORT" Default="" Mode="" Description="Port of database server (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Name" Target="CONNECTION_DATABASE" Default="" Mode="" Description="Name of the database (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database User" Target="CONNECTION_USER" Default="" Mode="" Description="Database user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Password" Target="CONNECTION_PASSWORD" Default="" Mode="" Description="Password of database user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Root Password" Target="CONNECTION_MYSQL_ROOT_PASSWORD" Default="" Mode="" Description="Password of database root user to automatically create database and user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Sqlite Databse Path" Target="/app/database" Default="" Mode="rw" Description="Path of local sqlite database (sqlite only)" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Password" Target="APPSETTINGS_CULTURE" Default="en-US" Mode="" Description="Sets localization like currency and number format (Must be a BCP 47 language tag)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Password" Target="APPSETTINGS_THEME" Default="default" Mode="" Description="Theme that will be used (see https://bootswatch.com/), e.g. darkly, solar etc." Type="Variable" Display="always" Required="false" Mask="false"/>  
 </Container>
