@@ -90,6 +90,6 @@
   <Config Name="Database Password" Target="CONNECTION_PASSWORD" Default="" Mode="" Description="Password of database user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Database Root Password" Target="CONNECTION_MYSQL_ROOT_PASSWORD" Default="" Mode="" Description="Password of database root user to automatically create database and user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Sqlite Databse Path" Target="/app/database" Default="" Mode="rw" Description="Path of local sqlite database (sqlite only)" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Database Password" Target="APPSETTINGS_CULTURE" Default="en-US" Mode="" Description="Sets localization like currency and number format (Must be a BCP 47 language tag)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Localization" Target="APPSETTINGS_CULTURE" Default="en-US" Mode="" Description="Sets localization like currency and number format (Must be a BCP 47 language tag)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Database Password" Target="APPSETTINGS_THEME" Default="default" Mode="" Description="Theme that will be used (see https://bootswatch.com/), e.g. darkly, solar etc." Type="Variable" Display="always" Required="false" Mask="false"/>  
 </Container>
