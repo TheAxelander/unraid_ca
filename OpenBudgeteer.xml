@@ -79,7 +79,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="WebUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">6100</Config>
+  <Config Name="WebUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6100</Config>
   <Config Name="Database Provider" Target="CONNECTION_PROVIDER" Default="mariadb" Mode="" Description="mysql, mariadb or postgresql" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Database Server" Target="CONNECTION_SERVER" Default="" Mode="" Description="IP address of database server" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Database Port" Target="CONNECTION_PORT" Default="" Mode="" Description="Port of database server" Type="Variable" Display="always" Required="false" Mask="false"/>
