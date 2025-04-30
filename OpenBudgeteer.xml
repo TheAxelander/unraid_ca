@@ -69,12 +69,37 @@
     </Variable>
     <Variable>
       <Value/>
+      <Name>CONNECTION_REDIS_SERVER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CONNECTION_REDIS_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CONNECTION_REDIS_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CONNECTION_REDIS_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CONNECTION_REDIS_PREFIX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
       <Name>APPSETTINGS_CULTURE</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>APPSETTINGS_THEME</Name>
+      <Name>APPSETTINGS_DEMO_DATA</Name>
       <Mode/>
     </Variable>
   </Environment>
@@ -87,6 +112,13 @@
   <Config Name="Database User" Target="CONNECTION_USER" Default="" Mode="" Description="Database user" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Database Password" Target="CONNECTION_PASSWORD" Default="" Mode="" Description="Password of database user" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Database Root Password" Target="CONNECTION_ROOT_PASSWORD" Default="" Mode="" Description="Password of database root user to automatically create database and user (mysql, mariadb only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+
+  <Config Name="Redis Server" Target="CONNECTION_REDIS_SERVER" Default="" Mode="" Description="IP address of Redis server" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Redis Port" Target="CONNECTION_REDIS_PORT" Default="" Mode="" Description="Port of Redis server" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Redis User" Target="CONNECTION_REDIS_USER" Default="" Mode="" Description="Redis User (if ACL is used)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Redis Password" Target="CONNECTION_REDIS_PASSWORD" Default="" Mode="" Description="Redis Password (if ACL is used)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Redis Keys Prefix" Target="CONNECTION_REDIS_PREFIX" Default="" Mode="" Description="Redis Keys Prefix (if ACL is used)" Type="Variable" Display="always" Required="false" Mask="false"/>
+
   <Config Name="Localization" Target="APPSETTINGS_CULTURE" Default="en-US" Mode="" Description="Sets localization like currency and number format (Must be a BCP 47 language tag)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Theme" Target="APPSETTINGS_THEME" Default="default" Mode="" Description="Theme that will be used (see https://bootswatch.com/), e.g. darkly, solar etc." Type="Variable" Display="always" Required="false" Mask="false"/>  
+  <Config Name="Generate Demo Data" Target="APPSETTINGS_DEMO_DATA" Default="false" Mode="" Description="Generate a set of initial data for demo purposes" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
