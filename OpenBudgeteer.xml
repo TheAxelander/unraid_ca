@@ -106,18 +106,23 @@
   <Labels/>
   <Config Name="WebUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6100</Config>
   <Config Name="Database Provider" Target="CONNECTION_PROVIDER" Default="mariadb" Mode="" Description="mysql, mariadb or postgresql" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Database Server" Target="CONNECTION_SERVER" Default="" Mode="" Description="IP address of database server" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Database Port" Target="CONNECTION_PORT" Default="" Mode="" Description="Port of database server" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Database Name" Target="CONNECTION_DATABASE" Default="" Mode="" Description="Name of the database" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Database User" Target="CONNECTION_USER" Default="" Mode="" Description="Database user" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Database Password" Target="CONNECTION_PASSWORD" Default="" Mode="" Description="Password of database user" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Database Root Password" Target="CONNECTION_ROOT_PASSWORD" Default="" Mode="" Description="Password of database root user to automatically create database and user (mysql, mariadb only)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Server" Target="CONNECTION_SERVER" Default="localhost" Mode="" Description="IP address of database server" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Port" Target="CONNECTION_PORT" Default="3306" Mode="" Description="Port of database server" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Name" Target="CONNECTION_DATABASE" Default="openbudgeteer" Mode="" Description="Name of the database" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database User" Target="CONNECTION_USER" Default="openbudgeteer" Mode="" Description="Database user" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Password" Target="CONNECTION_PASSWORD" Default="" Mode="" Description="Password of database user" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Database Root Password" Target="CONNECTION_ROOT_PASSWORD" Default="" Mode="" Description="Password of database root user to automatically create database and user (mysql, mariadb only)" Type="Variable" Display="always" Required="false" Mask="true"/>
 
-  <Config Name="Redis Server" Target="CONNECTION_REDIS_SERVER" Default="" Mode="" Description="IP address of Redis server" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Redis Port" Target="CONNECTION_REDIS_PORT" Default="" Mode="" Description="Port of Redis server" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Redis Server" Target="CONNECTION_REDIS_SERVER" Default="localhost" Mode="" Description="IP address of Redis server" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Redis Port" Target="CONNECTION_REDIS_PORT" Default="6379" Mode="" Description="Port of Redis server" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Redis User" Target="CONNECTION_REDIS_USER" Default="" Mode="" Description="Redis User (if ACL is used)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Redis Password" Target="CONNECTION_REDIS_PASSWORD" Default="" Mode="" Description="Redis Password (if ACL is used)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Redis Password" Target="CONNECTION_REDIS_PASSWORD" Default="" Mode="" Description="Redis Password (if ACL is used)" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Redis Keys Prefix" Target="CONNECTION_REDIS_PREFIX" Default="" Mode="" Description="Redis Keys Prefix (if ACL is used)" Type="Variable" Display="always" Required="false" Mask="false"/>
+
+  <Config Name="Authentication Active" Target="APPSETTINGS_AUTH_ENABLED" Default="false" Mode="" Description="Enables a login screen" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Authentication User" Target="APPSETTINGS_AUTH_USERNAME" Default="" Mode="" Description="Login User name" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="Authentication Password" Target="APPSETTINGS_AUTH_PASSWORD" Default="" Mode="" Description="Login User password" Type="Variable" Display="always" Required="false" Mask="true">hammerlock</Config>
+  <Config Name="Authentication Session Days" Target="APPSETTINGS_AUTH_SESSION_DAYS" Default="7" Mode="" Description="Number of days for how long the session token in Redis will be kept" Type="Variable" Display="always" Required="false" Mask="false">7</Config>
 
   <Config Name="Localization" Target="APPSETTINGS_CULTURE" Default="en-US" Mode="" Description="Sets localization like currency and number format (Must be a BCP 47 language tag)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Generate Demo Data" Target="APPSETTINGS_DEMO_DATA" Default="false" Mode="" Description="Generate a set of initial data for demo purposes" Type="Variable" Display="always" Required="false" Mask="false"/>
